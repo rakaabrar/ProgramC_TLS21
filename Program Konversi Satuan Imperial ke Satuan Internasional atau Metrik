@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char pick;
+    
+    cout<<"Program konversi satuan imperial ke satuan internasional atau Metrik\n";
+    cout<<"--------------------------------------------------------------------\n";    
+    cout<<"a) fahrenheit ke celcius dan kelvin\n";
+    cout<<"b) feet ke meter\n";
+    cout<<"c) inch ke centimeter\n";
+    cout<<"d) pounds ke kilogram\n";
+    cout<<"e) mil ke kilometer\n";
+    cout<<"Pilih program konversi yang dibutuhkan : ";
+    cin>>pick;
+    
+    if (pick == 'a' or pick == 'b' or pick == 'c' or pick == 'd' or pick == 'e')
+    {
+        switch(pick)
+        {
+            case 'a':
+            float ce, fa, ke;
+            cout<<"Masukkan suhu dalam fahrenheit : ";
+            cin>>fa;
+            ce = (fa-32)/1.8;
+            ke = (fa-32)/1.8+273;
+            cout<<"Suhu "<<fa<<" F dalam celcius adalah " <<ce<<" C ";
+            cout<<"dan dalam kelvin adalah " <<ke<<" K";
+            break;
+
+            case 'b':
+            float ft, m;
+            cout<<"Masukkan panjang dalam feet : ";
+            cin>>ft;
+            m = ft/3.281;
+            cout<<"Panjang "<<ft<<" ft dalam meter adalah " <<m<<" m";
+            break;
+
+            case 'c':
+            float inch, cm;
+            cout<<"Masukkan panjang dalam inch : ";
+            cin>>inch;
+            cm = inch*2.54;
+            cout<<"Panjang "<<inch<<" inch dalam centimeter adalah " <<cm<<" cm";
+            break;
+
+            case 'd':
+            float lb, kg;
+            cout<<"Masukkan massa dalam pounds : ";
+            cin>>lb;
+            kg = lb/2.205;
+            cout<<"Massa "<<lb<<" lb dalam centimeter adalah " <<kg<<" kg";
+            break;
+
+            case 'e':
+            float mil, km;
+            cout<<"Masukkan jarak dalam mil : ";
+            cin>>mil;
+            km = mil*1.609;
+            cout<<"Jarak "<<mil<<" mil dalam kilometer adalah " <<km<<" km";
+            break;
+        }  
+    }
+    else
+        cout<<"Anda salah memasukkan opsi !";        
+        
+    return 0;
+}
